@@ -1,0 +1,131 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+%map-style {
+    overflow: hidden;
+    width: 100%;
+    height: $height-map;
+}
+%copyright-font {
+    @include setFont(13px, #000, 400);
+}
+%ft-thongke-css{
+    @include grid(flex, $flex-wrap: wrap, $justify-content: flex-end, 
+      $align-items: null, $gutter: null);
+    @extend %reset-list;
+    position: relative;
+    li {
+        @extend %copyright-font;
+        @include grid(flex, $justify-content: space-between, $align-items: center);
+        position: relative;
+        margin: 5px 0;
+        span{
+            margin-left: 5px;
+        }
+        &+li{
+            margin-left: 20px;
+
+            @include p-el(before, $el-width: 1px, $el-height: 10px){
+              background-color: #000;
+              left: -10px;
+            }
+        }
+    }
+}
+#footer {
+    position: relative;
+    width: 100%;
+    z-index: 5;
+    background-color: $bg-footer;
+    .ft-top{
+        padding: 30px 0; 
+    }
+    .ft-flex {
+        @include grid(flex, $flex-wrap: wrap, $justify-content: space-between, 
+          $align-items: null, $gutter: null);
+        .ft-info {
+            width: percentage(400/1190);
+        }
+        .ft-map {
+            // position: relative;
+            // width: 50%;
+        }
+        .ft-fanpage {
+            width: percentage(270/1190);
+            .fanpageplace {
+            }
+        }
+
+        .ft-baiviet {
+            width: percentage(320/1190);
+            ul {
+                @extend %reset-list;
+                li {
+                    @include setFont(14px, #000, 400, $font-text);
+                    margin-bottom: 10px;
+                    a {
+                        @include grid($display: flex, $align-items: center);
+                        @include transition(all 0.2s ease);
+                        position: relative;
+                        color: #000;
+                        &:hover{
+                            color: #f00;
+                        }
+                        @include p-el(before, $el-width: null, $el-height: null){
+                          // @include setFont(7px, #000, 700, $font-awesome);
+                          // left: 0;
+                          // content: "\f009";
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .ft-company {
+        @include setFont(36px, #000, 400, $font-text);
+        // @include setFont(em(31), #fff, 700);
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        // line-height: 1;
+        a {
+            color: #000;
+        }
+    }
+
+    .ft-tit {
+        @include setFont(17px, #000, 400);
+        position: relative;
+        text-transform: uppercase;
+        margin: 25px 0;
+        strong, span {
+            display: block;
+        }
+        // @include p-el(before, $el-width: 60px, $el-height: 2px){
+        //   background-color: $color-theme;
+        //   bottom: -10px;
+        // }
+    }
+
+    .copyright {
+        border-top: 1px solid #acacac;
+        position: relative;
+        .ft-wrap {
+            min-height: 60px;
+            @include grid($display: flex, $justify-content: space-between
+                , $align-items: center);
+            position: relative;
+            .text {
+                @extend %copyright-font;
+                margin: 5px 0;
+            }
+
+            ul.ft-thongke {
+                @extend %ft-thongke-css;
+            }
+        }
+    }
+}
+.codebando, .codebando iframe{
+    @extend %map-style;
+}

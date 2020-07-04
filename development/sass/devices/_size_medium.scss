@@ -1,0 +1,12 @@
+@media screen 
+	and (min-width: $device_size_medium	) 
+	and (max-width: $device_size_large)
+{
+  .main-nav > ul > li > a{
+    padding: 0 10px;
+    font-size: 14px;
+  }
+  #footer .ft-flex .ft-info, #footer .ft-flex .ft-thongkeweb{
+    width: percentage(1/3);
+  }
+}

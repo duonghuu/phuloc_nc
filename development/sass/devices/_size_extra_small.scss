@@ -1,0 +1,15 @@
+@media screen 
+	and (min-width: $device_size_mobile)
+	and (max-width: $device_size_small) {
+      // @include setCategory;
+      // @include setSpnoibat;
+      // @include setTieuchi;
+      // @include setTinnb;
+      // // @include setSlider;
+      
+      // @include setHeader;
+      // @include setMenu;
+      // @include setProductColumnMobile($p_col: 6, $p_gutter: $product-gutter);
+      // @include setCopyright;
+      // @include setFooter;
+}

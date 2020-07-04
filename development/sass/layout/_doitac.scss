@@ -1,0 +1,34 @@
+.doitac-bg {
+    padding: 50px 0;
+    background-color: $color-theme;
+    .doitac__title{
+        @include setFont(30px, #fff, 700, $font-title);
+        margin-bottom: 20px;
+    }
+    .doitac-main {
+        margin:  0 -9px;
+        .slick-prev{
+            left: -30px;
+        }
+        .slick-next{
+            right: -30px;
+        }
+        .doitac-item {
+            padding: 0 9px;
+            a, span {
+                @include transition(all 0.2s ease);
+                padding-top: percentage(90/185);
+                display: block;
+                position: relative;
+                overflow: hidden;
+                border-radius: 10px;
+                border: 1px solid #ccc;
+                img {
+                    @extend %img-fill;
+                    object-fit: cover;
+                    object-position: center center;
+                }
+            }
+        }
+    }
+}

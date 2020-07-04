@@ -1,0 +1,14 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+.main-title{
+  text-align: center;
+  &__name{
+    @include setFont(34px, #333, 700, $font-title);
+    text-transform: uppercase;    
+  }
+  &__desc{
+    @include setFont(15px, #5c5c5c, 400, $font-text);
+  }
+  @include bg("idx-tit.png",$background-repeat: no-repeat,$background-size: null,$background-position: center bottom);
+}
